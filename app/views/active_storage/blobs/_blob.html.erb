@@ -3,6 +3,10 @@
     <%= image_tag blob.representation(resize_to_limit: local_assigns[:in_gallery] ? [ 800, 600 ] : [ 1024, 768 ]) %>
   <% end %>
 
+  <% if blob.video? %>
+    <%= video_tag url_for(blob.attachable) %>
+  <% end %>
+
   <figcaption class="attachment__caption">
     <% if caption = blob.try(:caption) %>
       <%= caption %>
