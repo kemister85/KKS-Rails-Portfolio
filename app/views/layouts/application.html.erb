@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <%# PrismJS Theme %>
+    <link rel="stylesheet" href="http://prismjs.com/themes/prism-twilight.css"/>
+    <script type='text/javascript' src="http://prismjs.com/prism.js"></script>
   </head>
 
   <body>
+
     <%= yield %>
+
   </body>
 </html>
