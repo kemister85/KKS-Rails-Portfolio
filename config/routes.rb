@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'blog/index'
   resources :blogs
+
+  # Main
+  get 'blog/index'
+
+
+  # Devise
+  get 'users/sign_in'
+  get 'user/sign_up'
 
 
 
