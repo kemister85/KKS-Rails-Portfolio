@@ -3,8 +3,18 @@ Rails.application.routes.draw do
   resources :blogs
 
   # Main
+  
+  # Blog
   get 'blog/index'
 
+  # Home
+  get 'home/index'
+  get 'home/about'
+  get 'home/contact'
+  get 'home/journey'
+
+  # Redirect Path
+  get '*path' => redirect('/') #// redirects to home page if the route is not found.
 
   # Devise
   get 'users/sign_in'
