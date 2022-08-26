@@ -21,8 +21,11 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-
+    
+    <%= render "home/header"%>
     <%= yield %>
+    <%= render "home/footer"%>
 
+  </body>
   </body>
 </html>
