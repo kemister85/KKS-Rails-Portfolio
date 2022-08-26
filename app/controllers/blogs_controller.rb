@@ -1,9 +1,10 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_blog, only: %i[ show edit update destroy ]
 
   # GET /blogs or /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order("created_at DESC")
   end
 
   # GET /blogs/1 or /blogs/1.json
