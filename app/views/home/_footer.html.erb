@@ -1,0 +1,23 @@
+<div class="d-flex flex-direction-column justify-content-center align-items-center">© 2022 Copyright: Karl Kemister-Sheppard</div>
+
+ <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link bi bi-linkedin" href="https://www.linkedin.com/in/karl-kemister-sheppard-09b34889/"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link bi bi-github" href="https://github.com/kemister85"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link bi bi-telephone" href="tel:+61413431813"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link bi bi-envelope" href="mailto:karlkemistersheppard@gmail.com"></a>
+  </li>
+</ul>
+
+ <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <%= button_to "Log in", new_user_session_path, class:"btn btn-primary btn-sm"%>
+          <% if user_signed_in? %> 
+              <%= button_to "Logout", destroy_user_session_path, method: :delete, class:"btn btn-danger btn-sm"%>
+          <% end %>
+        </div>
